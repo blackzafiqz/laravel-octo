@@ -11,4 +11,9 @@ class Genre extends Model
 
     protected $table='Genre';
     public $timestamps=false;
+
+    public function MovieGenre()
+    {
+        return $this->hasMany(MovieGenre::class);
+    }
 }

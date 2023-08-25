@@ -11,4 +11,9 @@ class User extends Model
     protected $table = "User";
     public $timestamps=false;
 
+    public function Rating()
+    {
+        return $this->hasMany(Rating::class);
+    }
+
 }
