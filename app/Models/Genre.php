@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,16 +13,16 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property int $id
  * @property string $name
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\MovieGenre> $MovieGenre
+ * @property-read Collection<int, MovieGenre> $MovieGenre
  * @property-read int|null $movie_genre_count
- * @method static \Illuminate\Database\Eloquent\Builder|Genre newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Genre newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Genre query()
- * @method static \Illuminate\Database\Eloquent\Builder|Genre whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Genre whereName($value)
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Movie> $Movie
+ * @method static Builder|Genre newModelQuery()
+ * @method static Builder|Genre newQuery()
+ * @method static Builder|Genre query()
+ * @method static Builder|Genre whereId($value)
+ * @method static Builder|Genre whereName($value)
+ * @property-read Collection<int, Movie> $Movie
  * @property-read int|null $movie_count
- * @mixin \Eloquent
+ * @mixin Eloquent
  */
 class Genre extends Model
 {

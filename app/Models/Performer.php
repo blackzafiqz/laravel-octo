@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,14 +12,14 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property int $personnel_id
  * @property int $movie_id
- * @property-read \App\Models\Movie $Movie
- * @property-read \App\Models\Personnel $Personnel
- * @method static \Illuminate\Database\Eloquent\Builder|Performer newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Performer newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Performer query()
- * @method static \Illuminate\Database\Eloquent\Builder|Performer whereMovieId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Performer wherePersonnelId($value)
- * @mixin \Eloquent
+ * @property-read Movie $Movie
+ * @property-read Personnel $Personnel
+ * @method static Builder|Performer newModelQuery()
+ * @method static Builder|Performer newQuery()
+ * @method static Builder|Performer query()
+ * @method static Builder|Performer whereMovieId($value)
+ * @method static Builder|Performer wherePersonnelId($value)
+ * @mixin Eloquent
  */
 class Performer extends Model
 {

@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,17 +13,17 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property int $id
  * @property string $name
- * @property-read \App\Models\Director|null $Director
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Performer> $Performer
+ * @property-read Director|null $Director
+ * @property-read Collection<int, Performer> $Performer
  * @property-read int|null $performer_count
- * @method static \Illuminate\Database\Eloquent\Builder|Personnel newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Personnel newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Personnel query()
- * @method static \Illuminate\Database\Eloquent\Builder|Personnel whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Personnel whereName($value)
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Movie> $MoviePerformer
+ * @method static Builder|Personnel newModelQuery()
+ * @method static Builder|Personnel newQuery()
+ * @method static Builder|Personnel query()
+ * @method static Builder|Personnel whereId($value)
+ * @method static Builder|Personnel whereName($value)
+ * @property-read Collection<int, Movie> $MoviePerformer
  * @property-read int|null $movie_performer_count
- * @mixin \Eloquent
+ * @mixin Eloquent
  */
 class Personnel extends Model
 {

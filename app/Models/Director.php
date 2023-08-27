@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,14 +12,14 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property int $personnel_id
  * @property int $movie_id
- * @property-read \App\Models\Movie $Movie
- * @property-read \App\Models\Personnel $Personnel
- * @method static \Illuminate\Database\Eloquent\Builder|Director newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Director newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Director query()
- * @method static \Illuminate\Database\Eloquent\Builder|Director whereMovieId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Director wherePersonnelId($value)
- * @mixin \Eloquent
+ * @property-read Movie $Movie
+ * @property-read Personnel $Personnel
+ * @method static Builder|Director newModelQuery()
+ * @method static Builder|Director newQuery()
+ * @method static Builder|Director query()
+ * @method static Builder|Director whereMovieId($value)
+ * @method static Builder|Director wherePersonnelId($value)
+ * @mixin Eloquent
  */
 class Director extends Model
 {

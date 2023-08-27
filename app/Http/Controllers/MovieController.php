@@ -14,6 +14,7 @@ use App\Models\Theater;
 use App\Models\TimeSlot;
 use DateInterval;
 use DateTime;
+use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use Symfony\Component\HttpFoundation\Response as ResponseAlias;
@@ -124,7 +125,7 @@ class MovieController extends Controller
                     $movieLanguage->language_id = $languageCollection->first()->id;
                 $movieLanguage->save();
             }
-        } catch (\Exception $e) {
+        } catch (Exception $e) {
             return response()->json([
                 'message' => 'An error occurred: ' . $e->getMessage(),
                 'success' => false

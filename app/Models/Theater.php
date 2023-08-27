@@ -2,6 +2,9 @@
 
 namespace App\Models;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
+use Illuminate\Database\Eloquent\Collection;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -10,16 +13,16 @@ use Illuminate\Database\Eloquent\Model;
  *
  * @property int $id
  * @property string $name
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\TimeSlot> $TimeSlot
+ * @property-read Collection<int, TimeSlot> $TimeSlot
  * @property-read int|null $time_slot_count
- * @method static \Illuminate\Database\Eloquent\Builder|Theater newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Theater newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Theater query()
- * @method static \Illuminate\Database\Eloquent\Builder|Theater whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Theater whereName($value)
- * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Movie> $Movie
+ * @method static Builder|Theater newModelQuery()
+ * @method static Builder|Theater newQuery()
+ * @method static Builder|Theater query()
+ * @method static Builder|Theater whereId($value)
+ * @method static Builder|Theater whereName($value)
+ * @property-read Collection<int, Movie> $Movie
  * @property-read int|null $movie_count
- * @mixin \Eloquent
+ * @mixin Eloquent
  */
 class Theater extends Model
 {

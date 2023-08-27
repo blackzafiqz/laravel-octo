@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,17 +15,17 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $description
  * @property int $user_id
  * @property int $movie_id
- * @property-read \App\Models\Movie $Movie
- * @property-read \App\Models\User $User
- * @method static \Illuminate\Database\Eloquent\Builder|Rating newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Rating newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|Rating query()
- * @method static \Illuminate\Database\Eloquent\Builder|Rating whereDescription($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Rating whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Rating whereMovieId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Rating whereRating($value)
- * @method static \Illuminate\Database\Eloquent\Builder|Rating whereUserId($value)
- * @mixin \Eloquent
+ * @property-read Movie $Movie
+ * @property-read User $User
+ * @method static Builder|Rating newModelQuery()
+ * @method static Builder|Rating newQuery()
+ * @method static Builder|Rating query()
+ * @method static Builder|Rating whereDescription($value)
+ * @method static Builder|Rating whereId($value)
+ * @method static Builder|Rating whereMovieId($value)
+ * @method static Builder|Rating whereRating($value)
+ * @method static Builder|Rating whereUserId($value)
+ * @mixin Eloquent
  */
 class Rating extends Model
 {

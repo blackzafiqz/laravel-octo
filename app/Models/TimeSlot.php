@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use Eloquent;
+use Illuminate\Database\Eloquent\Builder;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
@@ -13,17 +15,17 @@ use Illuminate\Database\Eloquent\Model;
  * @property int $movie_id
  * @property int $theater_id
  * @property int $room
- * @property-read \App\Models\Movie $Movie
- * @property-read \App\Models\Theater $Theater
- * @method static \Illuminate\Database\Eloquent\Builder|TimeSlot newModelQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|TimeSlot newQuery()
- * @method static \Illuminate\Database\Eloquent\Builder|TimeSlot query()
- * @method static \Illuminate\Database\Eloquent\Builder|TimeSlot whereId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|TimeSlot whereMovieId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|TimeSlot whereTheaterId($value)
- * @method static \Illuminate\Database\Eloquent\Builder|TimeSlot whereTimeStart($value)
- * @method static \Illuminate\Database\Eloquent\Builder|TimeSlot whereRoom($value)
- * @mixin \Eloquent
+ * @property-read Movie $Movie
+ * @property-read Theater $Theater
+ * @method static Builder|TimeSlot newModelQuery()
+ * @method static Builder|TimeSlot newQuery()
+ * @method static Builder|TimeSlot query()
+ * @method static Builder|TimeSlot whereId($value)
+ * @method static Builder|TimeSlot whereMovieId($value)
+ * @method static Builder|TimeSlot whereTheaterId($value)
+ * @method static Builder|TimeSlot whereTimeStart($value)
+ * @method static Builder|TimeSlot whereRoom($value)
+ * @mixin Eloquent
  */
 class TimeSlot extends Model
 {
