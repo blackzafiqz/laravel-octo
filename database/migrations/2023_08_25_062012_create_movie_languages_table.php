@@ -29,6 +29,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('movie_languages');
+        Schema::dropIfExists('MovieLanguage');
     }
 };
