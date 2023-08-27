@@ -17,6 +17,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Theater query()
  * @method static \Illuminate\Database\Eloquent\Builder|Theater whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Theater whereName($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Movie> $Movie
+ * @property-read int|null $movie_count
  * @mixin \Eloquent
  */
 class Theater extends Model
@@ -28,5 +30,9 @@ class Theater extends Model
     public function TimeSlot()
     {
         return $this->hasMany(TimeSlot::class);
+    }
+    public function Movie()
+    {
+        return $this->hasManyThrough(Movie::class,TimeSlot::class, secondKey: 'id', secondLocalKey: 'movie_id');
     }
 }

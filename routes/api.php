@@ -1,9 +1,10 @@
 <?php
 
+use App\Http\Controllers\MovieController;
+use App\Http\Controllers\RatingController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
-//use App\Http\Controllers\TokenController;
-use App\Http\Controllers\UserController;
+use App\Http\Controllers\GenreController;
 /*
 |--------------------------------------------------------------------------
 | API Routes
@@ -15,8 +16,10 @@ use App\Http\Controllers\UserController;
 |
 */
 
-
-
-
-
-
+Route::post('/add_movie/',[MovieController::class,'create']);
+Route::get('/genre',[MovieController::class,'findByGenre']);
+Route::get('/timeslot',[MovieController::class,'findByTimeSlot']);
+Route::get('/specific_movie_theater',[MovieController::class,'findByTheater']);
+Route::get('/search_performer',[MovieController::class,'findByPerformer']);
+Route::post('/give_rating',[RatingController::class,'rateMovie']);
+Route::get('/new_movies',[MovieController::class,'findByLatest']);

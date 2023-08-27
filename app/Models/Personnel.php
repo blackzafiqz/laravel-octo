@@ -18,6 +18,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Personnel query()
  * @method static \Illuminate\Database\Eloquent\Builder|Personnel whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Personnel whereName($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Movie> $MoviePerformer
+ * @property-read int|null $movie_performer_count
  * @mixin \Eloquent
  */
 class Personnel extends Model
@@ -28,7 +30,7 @@ class Personnel extends Model
 
     public function Performer()
     {
-        return $this->hasMany(Performer::class);
+        return $this->hasMany(Performer::class,'personnel_id');
     }
     public function Director()
     {

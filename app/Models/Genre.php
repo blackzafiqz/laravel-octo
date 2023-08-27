@@ -17,6 +17,8 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|Genre query()
  * @method static \Illuminate\Database\Eloquent\Builder|Genre whereId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Genre whereName($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Movie> $Movie
+ * @property-read int|null $movie_count
  * @mixin \Eloquent
  */
 class Genre extends Model

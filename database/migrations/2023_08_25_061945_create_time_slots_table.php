@@ -18,6 +18,7 @@ return new class extends Migration
             $table->dateTime('time_start');
             $table->unsignedBigInteger('movie_id');
             $table->unsignedBigInteger('theater_id');
+            $table->unsignedBigInteger('room');
             $table->foreign('movie_id')->references('id')->on('Movie');
             $table->foreign('theater_id')->references('id')->on('Theater');
         });

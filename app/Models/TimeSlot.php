@@ -12,6 +12,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string $time_start
  * @property int $movie_id
  * @property int $theater_id
+ * @property int $room
  * @property-read \App\Models\Movie $Movie
  * @property-read \App\Models\Theater $Theater
  * @method static \Illuminate\Database\Eloquent\Builder|TimeSlot newModelQuery()
@@ -21,6 +22,7 @@ use Illuminate\Database\Eloquent\Model;
  * @method static \Illuminate\Database\Eloquent\Builder|TimeSlot whereMovieId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TimeSlot whereTheaterId($value)
  * @method static \Illuminate\Database\Eloquent\Builder|TimeSlot whereTimeStart($value)
+ * @method static \Illuminate\Database\Eloquent\Builder|TimeSlot whereRoom($value)
  * @mixin \Eloquent
  */
 class TimeSlot extends Model

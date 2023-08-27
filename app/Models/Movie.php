@@ -35,6 +35,8 @@ use Illuminate\Database\Eloquent\Relations\HasMany;
  * @method static \Illuminate\Database\Eloquent\Builder|Movie whereMpaaRating($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Movie whereRelease($value)
  * @method static \Illuminate\Database\Eloquent\Builder|Movie whereTitle($value)
+ * @property-read \Illuminate\Database\Eloquent\Collection<int, \App\Models\Rating> $Rating
+ * @property-read int|null $rating_count
  * @mixin \Eloquent
  */
 class Movie extends Model
@@ -62,5 +64,9 @@ class Movie extends Model
     public function TimeSlot(): HasMany
     {
         return $this->hasMany(TimeSlot::class);
+    }
+    public function Rating(): HasMany
+    {
+        return $this->hasMany(Rating::class);
     }
 }
